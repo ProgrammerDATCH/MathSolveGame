@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MathSolve Game"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#008080"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/mathProblemTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/descriptionTextView"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_below="@id/mathProblemTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: 10s"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_below="@id/scoreTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/answerLayout"
+        android:layout_below="@id/timerTextView"
+        android:layout_marginTop="8dp"
+        android:padding="4dp">
+
+        <EditText
+            android:id="@+id/userAnswerEditText"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_marginRight="2dp"
+            android:layout_height="wrap_content"
+            android:hint="Your Answer"
+            android:inputType="numberDecimal|numberSigned"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:background="#FFFFFF"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_below="@id/userAnswerEditText"
+            android:layout_centerHorizontal="true"
+            android:background="#008080"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+    <!-- Help Button Outside of the RelativeLayout -->
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="#008080"/>
+
+</RelativeLayout>
+
